@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "dotenv": "^18.0.0",
+    "playwright": "^1.63.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.4"
+  },
+  "scripts": {
+    "headed": "playwright test LoginAPITest.spec.ts --headed"
+  }
+}

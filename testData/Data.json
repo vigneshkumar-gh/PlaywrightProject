@@ -1,0 +1,20 @@
+{
+    "Register" :{
+        "Firstname" : "Simon",
+        "lastname" : "kumar",
+        "phone_no" : "9543434543",
+        "username" : "simonkumar1@gmail.com",
+        "password" : "qwerty",
+        "confirmpassword" : "qwerty"
+    },
+    "Login" : {
+        "ValidUser" : {
+            "username" : "simonkumar@gmail.com",
+            "password" : "qwerty"
+        },
+        "InvalidUser" : {
+            "username" : "rajeshkhana@gmail.com",
+            "password" : "qwerty"
+        }
+    }
+}

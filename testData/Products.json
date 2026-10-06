@@ -1,0 +1,21 @@
+{
+    "ProductExist" : {
+        "Product1" : "iPhone",
+        "Product1Price" : "$123.20",
+        "Product1Quantity" : "2",
+        "Product1TotalPrice" : "$246.40",
+        "Product2" : "MacBook Pro",
+        "Product2Price" : "$2,000.00",
+        "Product2Quantity" : "3",
+        "Product2TotalPrice" : "$6,000.00",
+        "Product3" : "HP LP3065",
+        "Product3Price" : "$122.00",
+        "Product3Quantity" : "4",
+        "Product3TotalPrice" : "$488.00",
+        "TotalPrice" : "$8,734.40"
+    },
+    "ProductNotExist" : {
+        "Product1" : "ChromeBook",
+        "Product2" : "Google Pixel"
+    }
+}
