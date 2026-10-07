@@ -29,7 +29,7 @@ export default defineConfig({
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     baseURL: process.env.BASE_URL,
-    headless : false,
+    headless : true,
     viewport: null,
     launchOptions : {
       args : ["--start-maximized"],

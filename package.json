@@ -8,6 +8,6 @@
     "@types/node": "^26.6.4"
   },
   "scripts": {
-    "headed": "playwright test LoginAPITest.spec.ts"
+    "headed": "playwright test LoginAPITest.spec.ts --headed"
   }
 }
