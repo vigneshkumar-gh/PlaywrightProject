@@ -42,7 +42,7 @@ test("Verify the Each Product Price", async ({loginPage, searchPage, cartPage}) 
     await expect(cartPage.getProductPrice(Products.ProductExist.Product2)).toHaveText(Products.ProductExist.Product2TotalPrice);
 })
 
-test.only("Verify the Total Price", async ({loginPage, searchPage, cartPage}) => {
+test("Verify the Total Price", async ({loginPage, searchPage, cartPage}) => {
     await searchPage.showShoppingCart();
     await cartPage.updateQuantity(Products.ProductExist.Product2, Products.ProductExist.Product2Quantity);
     await expect(cartPage.getTotalListedProductPrice()).toHaveText("1")

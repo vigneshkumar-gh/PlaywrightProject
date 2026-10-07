@@ -35,7 +35,7 @@ test("Verify Product Quantity", async ({searchPage, productPage}) => {
     await expect(productPage.getProductQuantity()).toHaveValue("5");
 })
 
-test.only("Verify Add to Cart", async ({searchPage, productPage, page}) => {
+test("Verify Add to Cart", async ({searchPage, productPage, page}) => {
     await searchPage.search(Products.ProductExist.Product2);
     console.log(
     "MacBook matches:",
