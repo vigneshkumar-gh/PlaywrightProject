@@ -12,7 +12,7 @@ on:
       test_file:
         description: 'Enter Playwright test file'
         required: true
-        default: 'tests/TC003_SearchProductTest.spec.ts'
+        default: 'tests/SearchProductTest.spec.ts'
 
 jobs:
   test:
