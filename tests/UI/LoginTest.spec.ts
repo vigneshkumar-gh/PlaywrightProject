@@ -5,7 +5,7 @@ import { LoginPage } from "../../pages/LoginPage"
 
 
 test.beforeEach(async ({page}) => {
-    await page.goto("")
+    await page.goto(process.env.BASE_URL!)
 })
 
 test("Testing Account Login", async ({page}) => {
