@@ -33,14 +33,19 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
+      
+      - name: List Playwright tests
+        run: npx playwright test --list
+
       - name: Run Playwright tests
-        env: 
+        env:
           BASE_URL: ${{ vars.BASE_URL }}
+          TEST_FILE: ${{ inputs.test_file }}
         run: |
-          if [ -n "${{ inputs.test_file }}" ]; then
-            npx playwright test "${{ inputs.test_file }}"
+          if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
+            npx playwright test "$TEST_FILE" --workers=1 --reporter=line
           else
-            npx playwright test
+            npx playwright test --workers=1 --reporter=line
           fi
 
       - name: Upload Playwright report
@@ -52,4 +57,3 @@ jobs:
           retention-days: 30
 
 
-          
