@@ -8,7 +8,7 @@ import { SearchPage } from "../../pages/SearchPage"
 
 
 test.beforeEach(async ({page}) => {
-    await page.goto("")
+    await page.goto(process.env.BASE_URL!)
 })
 
 test("EndtoEndTest", async ({page}) => {
