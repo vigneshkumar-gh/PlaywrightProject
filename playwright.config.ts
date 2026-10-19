@@ -44,7 +44,7 @@ export default defineConfig({
     {
       name: 'chromium',
       use: {
-        viewport: null,
+        viewport: { width: 1280, height: 720 },
         launchOptions: {
           args: ['--start-maximized'],
         },
