@@ -42,10 +42,10 @@ jobs:
           BASE_URL: ${{ vars.BASE_URL }}
           TEST_FILE: ${{ inputs.test_file }}
         run: |
-          if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
-            npx playwright test "$TEST_FILE" --workers=1 --reporter=line
+          if [ -n "$TEST_FILE" ]; then
+            npx playwright test "$TEST_FILE"
           else
-            npx playwright test --workers=1 --reporter=line
+            npx playwright test
           fi
 
       - name: Upload Playwright report
