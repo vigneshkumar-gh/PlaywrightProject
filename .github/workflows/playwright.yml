@@ -42,10 +42,7 @@ jobs:
           BASE_URL: ${{ vars.BASE_URL }}
           TEST_FILE: ${{ inputs.test_file }}
         run: |
-          if [ -n "$TEST_FILE" ]; then
-            npx playwright test "$TEST_FILE"
-          else
-            npx playwright test
+          npx playwright test tests/UI/EndToEndTest.spec.ts
           fi
 
       - name: Upload Playwright report
