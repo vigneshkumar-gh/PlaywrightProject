@@ -36,12 +36,9 @@ class CheckoutPage{
         this.SuccessMsg = page.getByText("Your order has been placed!");
     }
     async clickContinue1(page : Page){
-        await this.continue1.waitFor({ state: 'visible' });
-    await this.continue1.scrollIntoViewIfNeeded();
-
-    console.log("clicking continue1");
-
-    await this.continue1.click();
+        //await this.continue1.waitFor({ state: 'visible' });
+        await this.continue1.scrollIntoViewIfNeeded();
+        await this.continue1.click();
     }
     async clickContinue2(){
         await this.continue2.click();
@@ -50,7 +47,7 @@ class CheckoutPage{
         await this.textBox1.fill(name);
     }
     async fillTextBox2(name : string){
-        await this.textBox1.fill(name);
+        await this.textBox2.fill(name);
     }
     async clickContinue3(){
         await this.continue3.click();

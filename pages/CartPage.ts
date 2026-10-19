@@ -29,6 +29,7 @@ class CartPage{
         return this.cartProducts;
     }
     async updateQuantity(name : string,no : string){
+        await this.updateProductQuantity(name).clear();
         await this.updateProductQuantity(name).fill(no);
         await this.updateBtn(name).click()
     }

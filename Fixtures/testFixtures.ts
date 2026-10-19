@@ -17,10 +17,11 @@ type MyFixtures = {
 
 export const test = base.extend<MyFixtures>({
     loginPage : async ({page}, use) => {
+        await page.goto("");
         const loginPage = new LoginPage(page);
         const homePage = new HomePage(page);
-        homePage.clickMyAccount();
-        homePage.clickLogin();
+        await homePage.clickMyAccount();
+        await homePage.clickLogin();
         await loginPage.fillEmailId(Data.Login.ValidUser.username);
         await loginPage.fillPassword(Data.Login.ValidUser.password);
         await loginPage.clickSubmit();

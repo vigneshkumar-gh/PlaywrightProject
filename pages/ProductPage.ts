@@ -7,6 +7,7 @@ class ProductPage{
     CartSuccessMsg
     ProductImage
     page
+    cartBtn
     constructor(page : Page){
         this.page = page
         this.ProductName = page.locator("#product-product h1");
@@ -15,6 +16,7 @@ class ProductPage{
         this.ProductQuantity = page.locator("#input-quantity");
         this.AddToCartBtn = page.getByRole("button", {name  : "Add to Cart", exact : true});
         this.CartSuccessMsg = page.locator(".alert.alert-success.alert-dismissible");
+        this.cartBtn = page.getByText("Shopping Cart", {exact : true})
     }
 
     getProductName(){
@@ -47,6 +49,10 @@ class ProductPage{
             return this.CartSuccessMsg.getByRole("link").first();
         return this.CartSuccessMsg
     }
+
+    async clickCart(){
+        await this.cartBtn.click();
+    } 
 }
 
 export{ProductPage}
